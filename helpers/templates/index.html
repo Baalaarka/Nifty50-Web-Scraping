@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nifty 50</title>
+    <link rel = "stylesheet" type = "text/css" href = "/public/css/style.css"/>
+    <style type="text/css" media="screen">
+	    .card{
+			width: 250px;
+			border: 1px solid gray;
+			box-shadow: 2px 2px 4px #888;
+			padding-: 10px;
+			padding-bottom: 0px;
+			margin: 10px;
+		}
+		.item_value{
+			background-color: yellow;
+		}
+		.item_value.ltp{
+			margin-bottom: 0px;
+		}
+    	
+    </style>
+</head>
+<body>
+	{% for item in content %}
+	<div class="card">
+		<div class="content">
+			<ul>
+			{% for key in item %}
+				<li>{{key}} : {{item[key]}}</li>
+			{% endfor %}
+			</ul>
+		</div>
+	</div>
+	{% endfor %}
+</body>
+</html>
+
