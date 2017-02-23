@@ -2,37 +2,67 @@
 <html lang="en">
 <head>
     <title>Nifty 50</title>
-    <link rel = "stylesheet" type = "text/css" href = "/public/css/style.css"/>
-    <style type="text/css" media="screen">
-	    .card{
-			width: 250px;
-			border: 1px solid gray;
-			box-shadow: 2px 2px 4px #888;
-			padding-: 10px;
-			padding-bottom: 0px;
-			margin: 10px;
-		}
-		.item_value{
-			background-color: yellow;
-		}
-		.item_value.ltp{
-			margin-bottom: 0px;
-		}
-    	
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel = "stylesheet" type = "text/css" href = "/static/css/style.css"/>
 </head>
 <body>
-	{% for item in content %}
-	<div class="card">
-		<div class="content">
-			<ul>
-			{% for key in item %}
-				<li>{{key}} : {{item[key]}}</li>
-			{% endfor %}
-			</ul>
+	<header id="header" class="">
+		<div>
+			<img src="/static/images/stocks.png" class="logo" />
+			<h2>Nifty 50 - Top 10</h2>	
 		</div>
-	</div>
-	{% endfor %}
+	</header><!-- /header -->
+
+	<section class="main-section">
+		
+		{% for item in content %}
+		<div class="card">
+			<div class="main_cont">
+				<div class="float-left">
+					<h5>Stock</h5> : <h4>{{ item['symbol'] }}</h4>
+				</div>
+				<div class="float-right">
+					<h5>LTP</h5> : <h4>{{ item['ltp'] }}</h4>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="adt_cont">
+				<div>
+					<h5>Net Price</h5> : <h4>{{ item['netPrice'] }}</h4>
+				</div>
+				<div>
+					<h5>Series</h5> : <h4>{{ item['series'] }}</h4>
+				</div>
+				<div>
+					<h5>Open Price</h5> : <h4>{{ item['openPrice'] }}</h4>
+				</div>
+				<div>
+					<h5>Previous Price</h5> : <h4>{{ item['previousPrice'] }}</h4>
+				</div>
+				<div>
+					<h5>Last Corp Announcement Date</h5> : <h4>{{ item['lastCorpAnnouncementDate'] }}</h4>
+				</div>
+				<div>
+					<h5>High Price</h5> : <h4>{{ item['highPrice'] }}</h4>
+				</div>
+				<div>
+					<h5>Traded Quantity</h5> : <h4>{{ item['tradedQuantity'] }}</h4>
+				</div>
+				<div>
+					<h5>Turnover (InLakhs)</h5> : <h4>{{ item['turnoverInLakhs'] }}</h4>
+				</div>
+				<div>
+					<h5>LowPrice</h5> : <h4>{{ item['lowPrice'] }}</h4>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+
+		<div class="clear"></div>
+	</section>
+
+	<footer>
+		<span class="float-right small">Developed by Baalaa</span>
+	</footer>
 </body>
 </html>
-

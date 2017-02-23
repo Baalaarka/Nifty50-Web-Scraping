@@ -1,9 +1,94 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "Lato", sans-serif;
+	color: #807e7e;
+}
+
+header {
+	margin: 10px 0;
+	padding: 0 20px;
+	border-bottom: 1px solid #d4d4d5;
+}
+
+header h2 {
+	font-size: 24px;
+    font-weight: 600;
+    color: #4a4a4a;
+	display: inline-block;
+}
+
+header .logo {
+	width: 100px;
+    vertical-align: middle;
+}
+footer {
+	margin: 10px 0;
+	padding: 10px 20px;
+	border-top: 1px solid #d4d4d5;
+}
+
+footer .small {
+	font-size: 12px;
+}
+section.main-section {
+	max-width: 960px;
+	width: 100%;
+	margin: 0 auto;
+}
 .card{
-	width: 350px;
-	border: 1px solid gray;
-	box-shadow: 1px 1px 3px #888;
-	border-top: 10px solid green;
-	min-height: 250px;
-	padding-: 10px;
+	float: left;
+	display: inline-block;
+	width: 300px;
+	border-radius: 3px;
+	box-shadow: 0 0 0 1px #d4d4d5;
 	margin: 10px;
 }
+.card:hover{
+	box-shadow: 0 0 1px 2px #d4d4d5;
+}
+.listed{
+	list-style: none;
+}
+.main_cont{
+	padding:0 20px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: 600;
+	border-bottom: 1px dashed #d4d4d5;
+	background-color: #f8fafd;
+}
+.adt_cont{
+	padding: 20px;
+	font-size: 14px;
+	font-weight: 300;
+}
+.adt_cont h4, .adt_cont h5 {
+	padding-bottom: 5px;
+}
+.main_cont h4 {
+	font-weight: 600;
+}
+
+.adt_cont h4 {
+	color: #2a3a58;
+}
+
+.float-right{
+	float: right;
+	display: inline-block;
+}
+.float-left {
+	display: inline-block;
+	float: left;
+}
+.clear{ clear: both; }
+
+h4,h5{
+	margin: 0px;
+	display: inline-block;
+	font-weight: 100;
+	text-transform: uppercase;
+}    
+

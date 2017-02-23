@@ -22,7 +22,6 @@ class Nifty50app(object):
 if __name__ == '__main__':
     conf = {
         '/': {
-            'tools.sessions.on': True,
             'tools.staticdir.root': os.path.abspath(os.getcwd())
         },
         '/static': {
@@ -30,7 +29,7 @@ if __name__ == '__main__':
             'tools.staticdir.dir': './public'
         }
     }
-    cherrypy.quickstart(Nifty50app())
+    cherrypy.quickstart(Nifty50app(), '/', conf)
 
 # import urllib2
 # from bs4 import BeautifulSoup
