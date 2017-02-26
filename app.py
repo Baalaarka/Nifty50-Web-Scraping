@@ -29,6 +29,7 @@ if __name__ == '__main__':
             'tools.staticdir.dir': './public'
         }
     }
+    cherrypy.server.socket_host = '0.0.0.0'
     cherrypy.quickstart(Nifty50app(), '/', conf)
 
 # import urllib2
